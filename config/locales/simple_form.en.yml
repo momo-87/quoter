@@ -10,5 +10,5 @@ en:
   helpers:
     submit:
       quote:
-        create: Create quote
-        update: Update quote
+        create: Create Quote
+        update: Update Quote
