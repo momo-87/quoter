@@ -41,7 +41,7 @@ class QuotesTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
     assert_selector "h1", text: "Edit quote"
 
-    fill_in "name", with: "Updated quote"
+    fill_in "Name", with: "Updated quote"
     click_on "Update Quote"
 
     assert_selector "h1", text: "Quotes"
