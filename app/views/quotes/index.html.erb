@@ -4,9 +4,12 @@
       <h1>Quotes</h1>
       <%= link_to "New Quote",
                   new_quote_path,
+                  data: { turbo_frame: "second_frame" },
                   class: "btn btn--primary" %>
     </div>
   <% end %>
-
-  <%= render @quotes %>
+  
+  <%= turbo_frame_tag "second_frame" do %>
+    <%= render @quotes %>
+  <% end %>
 </main>
