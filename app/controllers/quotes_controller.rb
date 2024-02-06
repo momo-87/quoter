@@ -49,7 +49,11 @@ class QuotesController < ApplicationController
   # Destroy action to delete a specific quote and redirect to the index page with a notice.
   def destroy
     @quote.destroy
-    redirect_to quotes_path, notice: "Quote was successfully destroyed."
+
+    respond_to do | format|
+      format.html { redirect_to quotes_path, notice: "Quote was successfully destroyed." }
+      format.turbo_stream
+    end
   end
 
   private
