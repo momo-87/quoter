@@ -25,7 +25,10 @@ class QuotesController < ApplicationController
     # If the quote is successfully saved, redirect to the index page with a notice.
     # Otherwise, re-render the new view to display validation errors.
     if @quote.save
-      redirect_to quotes_path, notice: "Quote was successfully created."
+      respond_to do |format|
+        format.html { redirect_to quotes_path, notice: "Quote was successfully created." }
+        format.turbo_stream
+      end
     else
       render :new, status: :unprocessable_entity
     end
