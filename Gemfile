@@ -76,3 +76,5 @@ group :test do
 end
 
 gem 'simple_form', '~> 5.1.0'
+
+gem "devise", "~> 4.8.1"
