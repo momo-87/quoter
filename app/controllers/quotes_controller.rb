@@ -4,7 +4,7 @@
 
 class QuotesController < ApplicationController
   # Use a before_action filter to set the @quote instance variable before specific actions.
-  before_action :set_quote, only: %i[show edit update destroy]
+  before_action :set_quote, only: [:show, :edit, :update, :destroy]
 
   # Index action to fetch all quotes ordered by id:desc (see scope in the Quote model) and assign them to the @quotes instance variable.
   def index
@@ -63,8 +63,9 @@ class QuotesController < ApplicationController
   private
 
   # Private method to find and set the @quote instance variable based on the :id parameter.
+  # We must use current_company.quotes here instead of Quote for security reasons
   def set_quote
-    @quote = Quote.find(params[:id])
+    @quote = current_company.quotes.find(params[:id])
   end
 
   # Private method to permit and retrieve specific parameters for quote creation and updating.
