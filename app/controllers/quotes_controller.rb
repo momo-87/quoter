@@ -8,7 +8,7 @@ class QuotesController < ApplicationController
 
   # Index action to fetch all quotes ordered by id:desc (see scope in the Quote model) and assign them to the @quotes instance variable.
   def index
-    @quotes = Quote.ordered
+    @quotes = current_company.quotes.ordered
   end
 
   # Show action to render the show view for a specific quote.
