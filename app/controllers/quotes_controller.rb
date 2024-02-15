@@ -21,7 +21,8 @@ class QuotesController < ApplicationController
 
   # Create action to handle the creation of a new quote based on submitted parameters.
   def create
-    @quote = Quote.new(quote_params)
+    # Associate the newly created quote with the current user's company:
+    @quote = current_company.quotes.build(quote_params)
 
     # If the quote is successfully saved, redirect to the index page with a notice.
     # Otherwise, re-render the new view to display validation errors.
