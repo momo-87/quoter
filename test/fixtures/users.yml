@@ -8,7 +8,7 @@ manager:
   email: manager@eneo.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
 
-eavesdropper:
+teller:
   company: camwater
-  email: hiring@camwater.com
+  email: teller@camwater.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
