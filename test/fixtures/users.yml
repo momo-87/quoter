@@ -1,0 +1,14 @@
+accountant:
+  company: eneo
+  email: accountant@eneo.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+
+manager:
+  company: eneo
+  email: manager@eneo.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+
+teller:
+  company: camwater
+  email: teller@camwater.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>

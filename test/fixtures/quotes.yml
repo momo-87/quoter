@@ -1,8 +1,11 @@
 first:
+  company: eneo
   name: First quote
 
 second:
+  company: eneo
   name: Second quote
 
 third:
+  company: eneo
   name: Third quote
