@@ -6,6 +6,7 @@
 // Configuration
 @import "config/variables";
 @import "config/reset";
+@import "config/animation";
 
 // Components
 @import "components/btn";
@@ -13,6 +14,7 @@
 @import "components/form";
 @import "components/visually_hidden";
 @import "components/quote";
+@import "components/flash";
 
 // Layouts
 @import "layouts/container";
