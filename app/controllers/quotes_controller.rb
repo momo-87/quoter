@@ -44,7 +44,10 @@ class QuotesController < ApplicationController
     # If the quote is successfully updated, redirect to the index page with a notice.
     # Otherwise, re-render the edit view to display validation errors.
     if @quote.update(quote_params)
-      redirect_to quotes_path, notice: 'Quote was successfully updated.'
+      respond_to do |format|
+        format.html { redirect_to quotes_path, notice: 'Quote was successfully updated.' }
+        format.turbo_stream { flash.now[:notice] = "Quote was successfully updated." }
+      end
     else
       render :edit, status: :unprocessable_entity
     end
