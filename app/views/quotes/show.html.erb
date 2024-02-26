@@ -4,5 +4,10 @@
     <h1>
       <%= @quote.name %>
     </h1>
+
+    <!-- Add a link to the LineItemDates#new page -->
+    <%= link_to "New date",
+        new_quote_line_item_date_path(@quote),
+        class: "btn btn--primary" %>
   </div>
 </main>
