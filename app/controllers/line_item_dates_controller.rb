@@ -1,0 +1,2 @@
+class LineItemDatesController < ApplicationController
+end
