@@ -1,5 +1,5 @@
 class LineItemDatesController < ApplicationController
-  before_action: :set_quote
+  before_action :set_quote
 
   def new 
     @line_item_date = @quote.line_item_dates.build
