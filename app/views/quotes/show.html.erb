@@ -8,8 +8,12 @@
     <!-- Add a link to the LineItemDates#new page -->
     <%= link_to "New date",
         new_quote_line_item_date_path(@quote),
+        data: { turbo_frame: dom_id(LineItemDate.new) },
         class: "btn btn--primary" %>
   </div>
+
+  <!-- An empty Turbo Frame with the id of new_line_item_date -->
+  <%= turbo_frame_tag LineItemDate.new %>
 
   <!-- Line to render the collection of line item dates -->
   <%= render @line_item_dates, quote: @quote %>
