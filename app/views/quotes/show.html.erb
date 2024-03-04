@@ -16,5 +16,7 @@
   <%= turbo_frame_tag LineItemDate.new %>
 
   <!-- Line to render the collection of line item dates -->
-  <%= render @line_item_dates, quote: @quote %>
+  <%= turbo_frame_tag "line_item_dates" do %>
+   <%= render @line_item_dates, quote: @quote %>
+  <% end %>
 </main>
