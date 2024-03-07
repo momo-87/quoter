@@ -13,7 +13,7 @@ class QuotesController < ApplicationController
 
   # Show action to render the show view for a specific quote.
   def show
-    @line_item_dates = @quote.line_item_dates.ordered
+    @line_item_dates = @quote.line_item_dates.includes(:line_items).ordered
   end
 
   # New action to initialize a new quote and assign it to the @quote instance variable.
