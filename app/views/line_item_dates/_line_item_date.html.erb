@@ -33,7 +33,6 @@
         <%= link_to "Add item",
                     [:new, quote, line_item_date, :line_item],
                     data: { turbo_frame: nested_dom_id(line_item_date, LineItem.new) },
-                    data: { turbo_frame: "_top" },
                     class: "btn btn--primary" %>
       </div>
     </div>
