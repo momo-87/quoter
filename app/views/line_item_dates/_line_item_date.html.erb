@@ -24,8 +24,10 @@
         <div class="line-item__price">Price</div>
         <div class="line-item__actions"></div>
       </div>
-
-      <%= render line_item_date.line_items, quote: quote, line_item_date: line_item_date %>
+      
+      <%= turbo_frame_tag nested_dom_id(line_item_date, "line_items") do %>
+        <%= render line_item_date.line_items, quote: quote, line_item_date: line_item_date %>
+      <% end %>
 
       <%= turbo_frame_tag nested_dom_id(line_item_date, LineItem.new) %>
 
