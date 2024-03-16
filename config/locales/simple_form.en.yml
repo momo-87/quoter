@@ -27,7 +27,7 @@ en:
         update: Update Quote
       line_item:
         create: Create item
-        update: update item
+        update: Update item
       line_item_date:
         create: Create date
-        update: Update  date
+        update: Update date
