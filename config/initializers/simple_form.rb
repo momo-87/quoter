@@ -11,7 +11,7 @@ SimpleForm.setup do |config|
     # Use placeholder attributes for form inputs.
     b.use :placeholder
     # Use labels with a visually-hidden class.
-    b.use :label, class: 'visually-hidden'
+    b.use :label
     # Use form inputs with specific classes, and indicate invalid state with another class.
     b.use :input, class: 'form__input', error_class: 'form__input--invalid'
   end
