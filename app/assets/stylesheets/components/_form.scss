@@ -35,6 +35,16 @@
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
+  margin-top: 20px;
+
+  .field {
+    width: 300px;
+
+    input {
+      width: 100%;
+      padding: 0.25rem;
+    }
+  }
 }
 
 // Styling the <h2>Log in</h2> tag
@@ -42,4 +52,8 @@
   display: block;
   width: fit-content;
   margin: 0 auto;
+}
+
+.new_user + a {
+  display: none;
 }
