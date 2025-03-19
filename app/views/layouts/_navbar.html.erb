@@ -10,9 +10,13 @@
                   destroy_user_session_path,
                   method: :delete,
                   class: "btn btn--dark" %>
-  <% else %>
+  <% elsif request.path == new_user_registration_path %>
     <%= link_to "Sign in",
                 new_user_session_path,
+                class: "btn btn--dark navbar__right" %>
+  <% elsif request.path == new_user_session_path %>
+    <%= link_to "Sign up",
+                new_user_registration_path, 
                 class: "btn btn--dark navbar__right" %>
   <% end %>
 </header>
