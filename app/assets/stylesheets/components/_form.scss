@@ -54,6 +54,7 @@
   margin: 0 auto;
 }
 
+// remove the <a>Sign in</a> tag from the sign up page
 .new_user + a {
   display: none;
 }
