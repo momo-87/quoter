@@ -86,5 +86,6 @@ test:
 production:
   <<: *default
   database: quoter_production
-  username: quoter
-  password: <%= ENV["QUOTER_DATABASE_PASSWORD"] %>
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
+  host: <%= ENV['DB_HOST'] %>
