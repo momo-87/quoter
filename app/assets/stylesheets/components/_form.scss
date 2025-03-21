@@ -26,3 +26,46 @@
     }
   }
 }
+
+
+/* Target Devise new user form styles */
+.new_user {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .form-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 300px;
+    padding-bottom: 20px;
+
+    div {
+      width: 100%;
+      padding: 0.25rem;
+
+      input {
+        width: 100%;
+        padding: 0.25rem;
+        border: 1px solid #ccc;
+      }
+    }
+  }
+}
+
+// Styling the <h2>Log in</h2> tag
+.flash + h2 {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+// remove the <a>Sign in</a> tag from the sign up page
+.new_user + a {
+  display: none;
+}

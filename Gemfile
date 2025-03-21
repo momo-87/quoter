@@ -77,4 +77,7 @@ end
 
 gem 'simple_form', '~> 5.1.0'
 
-gem "devise", "~> 4.8.1"
+gem 'devise', '~> 4.8.1'
+
+# Use to read the .env files
+gem 'dotenv-rails'

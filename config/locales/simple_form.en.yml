@@ -3,7 +3,7 @@ en:
     placeholders:
       quote:
         name: Name of your quote
-      line_item: 
+      line_item:
         name: Name of your item
         description: Description (optional)
         quantity: 1

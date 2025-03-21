@@ -4,7 +4,7 @@
 
 class QuotesController < ApplicationController
   # Use a before_action filter to set the @quote instance variable before specific actions.
-  before_action :set_quote, only: [:show, :edit, :update, :destroy]
+  before_action :set_quote, only: %i[show edit update destroy]
 
   # Index action to fetch all quotes ordered by id:desc (see scope in the Quote model) and assign them to the @quotes instance variable.
   def index
@@ -31,7 +31,7 @@ class QuotesController < ApplicationController
     if @quote.save
       respond_to do |format|
         format.html { redirect_to quotes_path, notice: 'Quote was successfully created.' }
-        format.turbo_stream { flash.now[:notice] = "Quote was successfully created." }
+        format.turbo_stream { flash.now[:notice] = 'Quote was successfully created.' }
       end
     else
       render :new, status: :unprocessable_entity
@@ -48,7 +48,7 @@ class QuotesController < ApplicationController
     if @quote.update(quote_params)
       respond_to do |format|
         format.html { redirect_to quotes_path, notice: 'Quote was successfully updated.' }
-        format.turbo_stream { flash.now[:notice] = "Quote was successfully updated." }
+        format.turbo_stream { flash.now[:notice] = 'Quote was successfully updated.' }
       end
     else
       render :edit, status: :unprocessable_entity
@@ -61,7 +61,7 @@ class QuotesController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to quotes_path, notice: 'Quote was successfully destroyed.' }
-      format.turbo_stream { flash.now[:notice] = "Quote was successfully destroyed." }
+      format.turbo_stream { flash.now[:notice] = 'Quote was successfully destroyed.' }
     end
   end
 
