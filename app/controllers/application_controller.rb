@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   end
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:company_name, :company_id])
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[company_name company_id])
   end
 
   # Turn the current_company method into a helper to be able to use it in view files
