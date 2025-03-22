@@ -43,6 +43,11 @@ RUN apt-get update -qq && \
 # RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 # RUN nvm install lts/iron
 
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh && \
+    bash nodesource_setup.sh
+RUN apt-get install -y nodejs
+RUN npm install --global yarn
+
 
 # Install application gems
 COPY Gemfile Gemfile.lock ./
