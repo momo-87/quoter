@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get '/up', to: 'health#up' # Health check endpoint
   root to: 'pages#home'
 
   devise_for :users, controllers: {

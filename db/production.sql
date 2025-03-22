@@ -1,0 +1,4 @@
+CREATE DATABASE quoter_production;
+CREATE DATABASE quoter_production_cache;
+CREATE DATABASE quoter_production_queue;
+CREATE DATABASE quoter_production_cable;
